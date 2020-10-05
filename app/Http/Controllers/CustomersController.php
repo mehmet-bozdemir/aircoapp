@@ -2,18 +2,37 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
    public function list(){
-        $customers = [
-            'john Doe',
-            'Jane Doe',
-            'Henk Doe'
-        ];
+
+       $customers = Customer::all();
+
+//       dd($customers);
+
         return view('internals.customers', [
             'customers'=>$customers
         ]);
    }
+
+    public function store(){
+//        dd(request('name'));
+
+        $data = request()->validate([
+            'name'=>'required|min:3',
+            'email'=>'required|email'
+        ]);
+
+        $customer = new Customer();
+        $customer->name = \request('name');
+        $customer->email = \request('email');
+        $customer->save();
+
+        return back();
+
+    }
 }
