@@ -46,6 +46,10 @@ class CustomersController extends Controller
         Customer::create($request->all());
 
         return redirect('customers');
+    }
 
+    public function show(Customer $customer){
+//        dd($customer);
+        return view('customers.show', compact('customer'));
     }
 }

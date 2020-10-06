@@ -24,3 +24,4 @@ Route::view('about', 'about');
 Route::get('customers', 'App\Http\Controllers\CustomersController@index');
 Route::get('customers/create', 'App\Http\Controllers\CustomersController@create');
 Route::post('customers', 'App\Http\Controllers\CustomersController@store');
+Route::get('customers/{customer}', 'App\Http\Controllers\CustomersController@show');
