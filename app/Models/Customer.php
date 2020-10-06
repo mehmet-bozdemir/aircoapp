@@ -11,9 +11,17 @@ class Customer extends Model
     // protected $guarded = [];
 
     // option-2 fillable way, explicitly addressing the fields
-        protected $fillable = ['name', 'email', 'active'];
+        protected $fillable = ['name', 'email', 'active', 'company_id'];
 
     use HasFactory;
+
+    public function getActiveAttribute($attribute){
+        return [
+            0=>'Inactive',
+            1=> 'Active'
+        ][$attribute];
+    }
+
     public function scopeActive($query){
         return $query->where('active', 1);
     }
@@ -21,4 +29,9 @@ class Customer extends Model
     public function scopeInactive($query){
         return $query->where('active', 0);
     }
+
+    public function company(){
+        return $this->belongsTo(Company::class);
+    }
+
 }

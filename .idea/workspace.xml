@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="639af424-c65b-4ce1-b616-6e693150d56b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/customers/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreateCustomerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreateCustomerRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_05_095812_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_05_095812_create_customers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/internals/customers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/internals/customers.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/internals/customers.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +170,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/customers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -182,7 +191,7 @@
       <updated>1601881849600</updated>
       <workItem from="1601881851102" duration="4412000" />
       <workItem from="1601890269808" duration="358000" />
-      <workItem from="1601891008805" duration="12145000" />
+      <workItem from="1601891008805" duration="22101000" />
     </task>
     <servers />
   </component>
@@ -205,9 +214,13 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="364" y="648" key="NewPhpFileDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1601899434597" />
-    <state x="161" y="325" width="838" height="1032" key="search.everywhere.popup" timestamp="1601903731545">
+    <state x="152" y="308" key="Vcs.Push.Dialog.v2" timestamp="1601929408604">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
-    <state x="161" y="325" width="838" height="1032" key="search.everywhere.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1601903731545" />
+    <state x="152" y="308" key="Vcs.Push.Dialog.v2/0.23.2560.1337@0.23.2560.1337" timestamp="1601929408604" />
+    <state x="161" y="325" width="838" height="1032" key="search.everywhere.popup" timestamp="1601977956944">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="161" y="325" width="838" height="1032" key="search.everywhere.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1601977956944" />
   </component>
 </project>

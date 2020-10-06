@@ -4,21 +4,25 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests\CreateCustomerRequest;
+use App\Models\Company;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
-   public function list(){
+   public function index(){
 
-       $activeCustomers = Customer::active()->get();
-       $inactiveCustomers = Customer::inactive()->get();
-
-//       $customers = Customer::all();
+       $customers = Customer::all();
 
 //       dd($customers);
 
-        return view('internals.customers', compact('activeCustomers', 'inactiveCustomers'));
+        return view('customers.index', compact('customers'));
+   }
+
+   public function create(){
+       $companies = Company::all();
+
+       return view('customers.create', compact('companies'));
    }
 
     public function store(CreateCustomerRequest $request){
@@ -41,7 +45,7 @@ class CustomersController extends Controller
 
         Customer::create($request->all());
 
-        return back();
+        return redirect('customers');
 
     }
 }
