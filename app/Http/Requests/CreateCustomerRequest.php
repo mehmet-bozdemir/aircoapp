@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Customer;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateCustomerRequest extends FormRequest
@@ -30,4 +31,20 @@ class CreateCustomerRequest extends FormRequest
             'company_id'=>'required'
         ];
     }
+
+    public function persist(Customer $customer)
+    {
+        $customers = Customer::all();
+
+        $customer->name = $this->name;
+        $customer->email = $this->email;
+        $customer->active = $this->active;
+        $customer->company_id = $this->company_id;
+
+
+        $customer->save();
+    }
 }
+
+
+

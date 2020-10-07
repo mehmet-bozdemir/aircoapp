@@ -21,7 +21,12 @@ Route::view('/', 'home');
 Route::view('contact', 'contact');
 Route::view('about', 'about');
 
-Route::get('customers', 'App\Http\Controllers\CustomersController@index');
-Route::get('customers/create', 'App\Http\Controllers\CustomersController@create');
-Route::post('customers', 'App\Http\Controllers\CustomersController@store');
-Route::get('customers/{customer}', 'App\Http\Controllers\CustomersController@show');
+//Route::get('customers', 'App\Http\Controllers\CustomersController@index');
+//Route::get('customers/create', 'App\Http\Controllers\CustomersController@create');
+//Route::post('customers', 'App\Http\Controllers\CustomersController@store');
+//Route::get('customers/{customer}', 'App\Http\Controllers\CustomersController@show');
+//Route::get('customers/{customer}/edit', 'App\Http\Controllers\CustomersController@edit');
+//Route::patch('customers/{customer}', 'App\Http\Controllers\CustomersController@update');
+//Route::delete('customers/{customer}', 'App\Http\Controllers\CustomersController@destroy');
+
+Route::resource('customers', 'App\Http\Controllers\CustomersController');

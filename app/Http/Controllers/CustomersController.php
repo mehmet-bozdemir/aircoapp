@@ -14,34 +14,17 @@ class CustomersController extends Controller
 
        $customers = Customer::all();
 
-//       dd($customers);
-
         return view('customers.index', compact('customers'));
    }
 
    public function create(){
        $companies = Company::all();
+       $customer = new Customer();
 
-       return view('customers.create', compact('companies'));
+       return view('customers.create', compact('companies', 'customer'));
    }
 
     public function store(CreateCustomerRequest $request){
-
-//        dd(request('name'));
-
-//        $data = request()->validate([
-//            'name'=>'required|min:3',
-//            'email'=>'required|email',
-//            'active'=>'required'
-//        ]);
-
-//        $customer = new Customer();
-//        $customer->name = \request('name');
-//        $customer->email = \request('email');
-//        $customer->active = \request('active');
-//        $customer->save();
-
-//        Customer::create($data);
 
         Customer::create($request->all());
 
@@ -49,7 +32,28 @@ class CustomersController extends Controller
     }
 
     public function show(Customer $customer){
-//        dd($customer);
+
         return view('customers.show', compact('customer'));
+    }
+
+    public function edit(Customer $customer){
+
+        $companies = Company::all();
+
+        return view('customers.edit', compact('customer', 'companies'));
+    }
+
+    public function update(CreateCustomerRequest $request,Customer $customer){
+
+        $request->persist($customer);
+
+        return redirect('customers/'.$customer->id);
+    }
+
+    public function destroy(Customer $customer){
+
+        $customer->delete();
+
+        return redirect('customers');
     }
 }

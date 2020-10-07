@@ -5,6 +5,15 @@
     <div class="row">
         <div class="col-12">
             <h1>Details for {{$customer->name}}</h1>
+            <div class="d-flex">
+                <p><a href="/customers/{{$customer->id}}/edit" class="btn btn-primary">Edit</a></p>
+
+                <form action="/customers/{{$customer->id}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-danger ml-3">DELETE</button>
+                </form>
+            </div>
         </div>
     </div>
 
